@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{7003328C-6AA3-4745-B3DD-C3AEB128A377}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <StartupObject>ShoppingCart.Module1</StartupObject>
+    <StartupObject>ShoppingCart.Main</StartupObject>
     <RootNamespace>ShoppingCart</RootNamespace>
     <AssemblyName>ShoppingCart</AssemblyName>
     <FileAlignment>512</FileAlignment>
@@ -69,7 +69,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Module1.vb" />
+    <Compile Include="Main.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
