@@ -17,6 +17,9 @@
             Dim amountString As String() = se.ExtractionString(se.ExtractionString(inputCommand, " ")(1), "-")
             ls.ShowList(goodsList.FindAll(Function(price) Integer.Parse(amountString(0)) < price.goodsPrice AndAlso price.goodsPrice < Integer.Parse(amountString(1))))
         End If
+        If mic.IsSortName Then
+            ls.ShowList((From goods In goodsList Order By goods.goodsName, goods.goodsDescription, goods.goodsPrice, goods.goodsInventory).ToList())
+        End If
     End Sub
 
 End Module
