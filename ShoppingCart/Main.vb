@@ -12,6 +12,11 @@
         If mic.IsSearchName Then
             ls.ShowList(goodsList.FindAll(Function(name) name.goodsName.Contains(inputCommand.Substring(7))))
         End If
+        If mic.IsSearchPrice Then
+            Dim se As New StringExtraction
+            Dim amountString As String() = se.ExtractionString(se.ExtractionString(inputCommand, " ")(1), "-")
+            ls.ShowList(goodsList.FindAll(Function(price) Integer.Parse(amountString(0)) < price.goodsPrice AndAlso price.goodsPrice < Integer.Parse(amountString(1))))
+        End If
     End Sub
 
 End Module
