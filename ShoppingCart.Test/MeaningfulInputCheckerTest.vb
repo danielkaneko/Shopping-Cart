@@ -10,12 +10,14 @@ Public Class MeaningfulInputCheckerTest
 
     Public Class CheckInputCommandTest : Inherits MeaningfulInputCheckerTest
         <TestCase("list")>
+        <TestCase("--name abc")>
         Public Sub コマンド入力で渡された値がコマンドとして適切であればTrueを返す(inputCommand As String)
             Dim actual As Boolean = mic.CheckInputCommand(inputCommand)
             Assert.IsTrue(actual)
         End Sub
 
         <TestCase("1ist")>
+        <TestCase("--naMe abc")>
         <TestCase("")>
         <TestCase(Nothing)>
         Public Sub コマンド入力で渡された値がコマンドとして適切でなければFalseを返す(inputCommand As String)

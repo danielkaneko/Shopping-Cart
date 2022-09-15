@@ -9,6 +9,9 @@
         If mic.IsList Then
             ls.ShowList(goodsList)
         End If
+        If mic.IsSearchName Then
+            ls.ShowList(goodsList.FindAll(Function(name) name.goodsName.Contains(inputCommand.Substring(7))))
+        End If
     End Sub
 
 End Module

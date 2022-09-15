@@ -1,10 +1,15 @@
 ﻿Imports Fhi.Fw
+Imports System.Text.RegularExpressions
 Public Class MeaningfulInputChecker
 
     ''' <summary>
     ''' 入力されたコマンドがlistである
     ''' </summary>
     Public IsList As Boolean = False
+    ''' <summary>
+    ''' 入力されたコマンドが--name 商品名である
+    ''' </summary>
+    Public IsSearchName As Boolean = False
 
     ''' <summary>
     ''' 意味のある入力がされるまで待機する
@@ -27,6 +32,10 @@ Public Class MeaningfulInputChecker
         If StringUtil.IsNotEmpty(inputCommand) AndAlso "list".Equals(inputCommand) Then
             IsList = True
             Return IsList
+        End If
+        If StringUtil.IsNotEmpty(inputCommand) AndAlso Regex.IsMatch(inputCommand, "^(--name .*)") Then
+            IsSearchName = True
+            Return IsSearchName
         End If
         Console.WriteLine("入力内容が正しくありません。")
         Return False
