@@ -20,6 +20,9 @@
         If mic.IsSortName Then
             ls.ShowList((From goods In goodsList Order By goods.goodsName, goods.goodsDescription, goods.goodsPrice, goods.goodsInventory).ToList())
         End If
+        If mic.IsSortPrice Then
+            ls.ShowList((From goods In goodsList Order By goods.goodsPrice, goods.goodsName, goods.goodsDescription, goods.goodsInventory).ToList())
+        End If
     End Sub
 
 End Module
