@@ -9,19 +9,19 @@ Public Class GoodsListMaker
         ''' <summary>
         ''' 商品名
         ''' </summary>
-        Public goodsName As String
+        Public GoodsName As String
         ''' <summary>
         ''' 商品説明
         ''' </summary>
-        Public goodsDescription As String
+        Public GoodsDescription As String
         ''' <summary>
         ''' 商品価格
         ''' </summary>
-        Public goodsPrice As Integer
+        Public GoodsPrice As Integer
         ''' <summary>
         ''' 商品在庫
         ''' </summary>
-        Public goodsInventory As Integer
+        Public GoodsInventory As Integer
         ''' <summary>
         ''' コンストラクタ
         ''' </summary>
