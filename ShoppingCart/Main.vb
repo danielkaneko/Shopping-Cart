@@ -2,7 +2,7 @@
 
     Sub Main()
         Dim plm As New GoodsListMaker
-        Dim goodsList As List(Of GoodsListMaker.GoodsProperty) = plm.RegisterGoodsList
+        Dim goodsList As List(Of GoodsListMaker.GoodsProperty) = plm.MakeGoodsList
         Dim ls As New ListShower
         Dim mic As New MeaningfulInputChecker
         Do

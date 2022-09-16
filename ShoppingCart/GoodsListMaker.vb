@@ -41,7 +41,7 @@ Public Class GoodsListMaker
     ''' 商品リストに各プロパティの値を設定し返す
     ''' </summary>
     ''' <returns>商品リスト</returns>
-    Public Function RegisterGoodsList() As List(Of GoodsProperty)
+    Public Function MakeGoodsList() As List(Of GoodsProperty)
         Dim goodsList As New List(Of GoodsProperty) From {
             New GoodsProperty("消しゴム", "モノけし", 120, 30),
             New GoodsProperty("ノート", "自由帳", 200, 100),
