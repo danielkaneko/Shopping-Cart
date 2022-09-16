@@ -38,7 +38,7 @@ Public Class MeaningfulInputChecker
         Dim listShowCommand As String
         Do
             listShowCommand = Console.ReadLine()
-        Loop While Not CheckInputCommand(listShowCommand)
+        Loop While Not IsValidInputCommand(listShowCommand)
         Return listShowCommand
     End Function
 
@@ -47,7 +47,7 @@ Public Class MeaningfulInputChecker
     ''' </summary>
     ''' <param name="inputCommand">入力された文字列</param>
     ''' <returns>コマンドとして正しければTrue、そうでなければFalse</returns>
-    Public Function CheckInputCommand(inputCommand As String) As Boolean
+    Public Function IsValidInputCommand(inputCommand As String) As Boolean
         IsList = False
         IsSearchName = False
         IsSearchPrice = False

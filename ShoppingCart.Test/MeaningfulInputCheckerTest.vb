@@ -8,7 +8,7 @@ Public Class MeaningfulInputCheckerTest
         mic = New MeaningfulInputChecker
     End Sub
 
-    Public Class CheckInputCommandTest : Inherits MeaningfulInputCheckerTest
+    Public Class IsValidInputCommandTest : Inherits MeaningfulInputCheckerTest
         <TestCase("list")>
         <TestCase("--name abc")>
         <TestCase("--price 100-1000")>
@@ -16,7 +16,7 @@ Public Class MeaningfulInputCheckerTest
         <TestCase("--sort price")>
         <TestCase("exit")>
         Public Sub コマンド入力で渡された値がコマンドとして適切であればTrueを返す(inputCommand As String)
-            Dim actual As Boolean = mic.CheckInputCommand(inputCommand)
+            Dim actual As Boolean = mic.IsValidInputCommand(inputCommand)
             Assert.IsTrue(actual)
         End Sub
 
@@ -29,7 +29,7 @@ Public Class MeaningfulInputCheckerTest
         <TestCase("")>
         <TestCase(Nothing)>
         Public Sub コマンド入力で渡された値がコマンドとして適切でなければFalseを返す(inputCommand As String)
-            Dim actual As Boolean = mic.CheckInputCommand(inputCommand)
+            Dim actual As Boolean = mic.IsValidInputCommand(inputCommand)
             Assert.IsFalse(actual)
         End Sub
     End Class
