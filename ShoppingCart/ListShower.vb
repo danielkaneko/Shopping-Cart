@@ -7,9 +7,9 @@ Public Class ListShower
     ''' 渡されたリストを表示する
     ''' </summary>
     ''' <param name="goodsList">表示するリスト</param>
-    Public Sub ShowList(goodsList As List(Of GoodsListMaker.GoodsProperty))
+    Public Sub ShowList(goodsList As List(Of Goods))
         If StringUtil.IsNotEmpty(goodsList) Then
-            For Each oneGoods As GoodsListMaker.GoodsProperty In goodsList
+            For Each oneGoods As Goods In goodsList
                 Console.WriteLine("商品名：" & oneGoods.GoodsName & vbCrLf & "商品説明：" & oneGoods.GoodsDescription & vbCrLf &
                               "価格：" & oneGoods.GoodsPrice & "円" & vbCrLf & "在庫数：" & oneGoods.GoodsInventory)
                 Console.WriteLine()
