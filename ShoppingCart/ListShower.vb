@@ -9,9 +9,9 @@ Public Class ListShower
     ''' <param name="goodsList">表示するリスト</param>
     Public Sub ShowList(goodsList As List(Of GoodsListMaker.GoodsProperty))
         If StringUtil.IsNotEmpty(goodsList) Then
-            For Each list In goodsList
-                Console.WriteLine("商品名：" & list.goodsName & vbCrLf & "商品説明：" & list.goodsDescription & vbCrLf &
-                              "価格：" & list.goodsPrice & "円" & vbCrLf & "在庫数：" & list.goodsInventory)
+            For Each oneGoods As GoodsListMaker.GoodsProperty In goodsList
+                Console.WriteLine("商品名：" & oneGoods.GoodsName & vbCrLf & "商品説明：" & oneGoods.GoodsDescription & vbCrLf &
+                              "価格：" & oneGoods.GoodsPrice & "円" & vbCrLf & "在庫数：" & oneGoods.GoodsInventory)
                 Console.WriteLine()
             Next
         Else
