@@ -6,12 +6,12 @@ Public Class ListShower
     ''' <summary>
     ''' 渡されたリストを表示する
     ''' </summary>
-    ''' <param name="goodsList">表示するリスト</param>
-    Public Sub ShowList(goodsList As List(Of Goods))
-        If StringUtil.IsNotEmpty(goodsList) Then
-            For Each oneGoods As Goods In goodsList
-                Console.WriteLine("商品名：" & oneGoods.GoodsName & vbCrLf & "商品説明：" & oneGoods.GoodsDescription & vbCrLf &
-                              "価格：" & oneGoods.GoodsPrice & "円" & vbCrLf & "在庫数：" & oneGoods.GoodsInventory)
+    ''' <param name="productsList">表示するリスト</param>
+    Public Sub ShowList(productsList As List(Of Products))
+        If StringUtil.IsNotEmpty(productsList) Then
+            For Each oneProducts As Products In productsList
+                Console.WriteLine("商品名：" & oneProducts.ProductsName & vbCrLf & "商品説明：" & oneProducts.ProductsDescription & vbCrLf &
+                              "価格：" & oneProducts.ProductsPrice & "円" & vbCrLf & "在庫数：" & oneProducts.ProductsInventory)
                 Console.WriteLine()
             Next
         Else
