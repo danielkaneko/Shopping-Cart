@@ -10,8 +10,10 @@ Public Class ListShower
     Public Sub ShowList(productsList As List(Of Products))
         If StringUtil.IsNotEmpty(productsList) Then
             For Each oneProducts As Products In productsList
-                Console.WriteLine("商品名：" & oneProducts.ProductsName & vbCrLf & "商品説明：" & oneProducts.ProductsDescription & vbCrLf &
-                              "価格：" & oneProducts.ProductsPrice & "円" & vbCrLf & "在庫数：" & oneProducts.ProductsInventory)
+                Console.WriteLine("商品名：" & oneProducts.ProductsName)
+                Console.WriteLine("商品説明：" & oneProducts.ProductsDescription)
+                Console.WriteLine("価格：" & oneProducts.ProductsPrice & "円")
+                Console.WriteLine("在庫数：" & oneProducts.ProductsInventory)
                 Console.WriteLine()
             Next
         Else
