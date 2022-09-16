@@ -1,4 +1,7 @@
-﻿Public Class GoodsListMaker
+﻿''' <summary>
+''' 商品リストを生成する
+''' </summary>
+Public Class GoodsListMaker
     ''' <summary>
     ''' 所品リストのプロパティ設定
     ''' </summary>

@@ -1,5 +1,8 @@
 ﻿Imports Fhi.Fw
 Imports System.Text.RegularExpressions
+''' <summary>
+''' 意味のある入力かどうかチェックする
+''' </summary>
 Public Class MeaningfulInputChecker
 
     ''' <summary>

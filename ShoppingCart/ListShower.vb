@@ -1,4 +1,7 @@
 ﻿Imports Fhi.Fw
+''' <summary>
+''' リスト表示
+''' </summary>
 Public Class ListShower
     ''' <summary>
     ''' 渡されたリストを表示する

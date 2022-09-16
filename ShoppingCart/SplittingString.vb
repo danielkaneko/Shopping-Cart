@@ -1,4 +1,7 @@
-﻿Public Class StringExtraction
+﻿''' <summary>
+''' 文字列を分割する
+''' </summary>
+Public Class StringExtraction
     ''' <summary>
     ''' 文字列を配列に分ける
     ''' </summary>
