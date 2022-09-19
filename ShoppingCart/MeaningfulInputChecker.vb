@@ -8,7 +8,7 @@ Public Class MeaningfulInputChecker
     ''' <summary>
     ''' 入力されたコマンドがlistである
     ''' </summary>
-    Public IsList As Boolean = False
+    Public IsListCommand As Boolean = False
     ''' <summary>
     ''' 入力されたコマンドが--name 商品名である
     ''' </summary>
@@ -49,8 +49,8 @@ Public Class MeaningfulInputChecker
     ''' <returns>コマンドとして正しければTrue、そうでなければFalse</returns>
     Public Function IsValidInputCommand(inputCommand As String) As Boolean
         If StringUtil.IsNotEmpty(inputCommand) AndAlso "list".Equals(inputCommand) Then
-            IsList = True
-            Return IsList
+            IsListCommand = True
+            Return IsListCommand
         End If
         If StringUtil.IsNotEmpty(inputCommand) AndAlso Regex.IsMatch(inputCommand, "^(--name .*)") Then
             IsSearchName = True

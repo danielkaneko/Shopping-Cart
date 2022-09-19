@@ -7,7 +7,7 @@
         Do
             Dim mic As New MeaningfulInputChecker
             Dim inputCommand As String = mic.WaitForMeaningfulInput
-            If mic.IsList Then
+            If mic.IsListCommand Then
                 ls.ShowList(productsList)
             End If
             If mic.IsSearchName Then
