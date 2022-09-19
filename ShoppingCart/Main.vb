@@ -4,8 +4,8 @@
         Dim plm As New ProductsListMaker
         Dim productsList As List(Of Products) = plm.MakeProductsList
         Dim ls As New ListShower
-        Dim mic As New MeaningfulInputChecker
         Do
+            Dim mic As New MeaningfulInputChecker
             Dim inputCommand As String = mic.WaitForMeaningfulInput
             If mic.IsList Then
                 ls.ShowList(productsList)
@@ -23,7 +23,10 @@
             If mic.IsSortPrice Then
                 ls.ShowList((From products In productsList Order By products.ProductsPrice, products.ProductsName, products.ProductsDescription, products.ProductsInventory).ToList())
             End If
-        Loop While Not mic.IsExit
+            If mic.IsExit Then
+                Exit Do
+            End If
+        Loop
     End Sub
 
 End Module

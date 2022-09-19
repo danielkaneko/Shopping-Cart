@@ -48,12 +48,6 @@ Public Class MeaningfulInputChecker
     ''' <param name="inputCommand">入力された文字列</param>
     ''' <returns>コマンドとして正しければTrue、そうでなければFalse</returns>
     Public Function IsValidInputCommand(inputCommand As String) As Boolean
-        IsList = False
-        IsSearchName = False
-        IsSearchPrice = False
-        IsSortName = False
-        IsSortPrice = False
-        IsExit = False
         If StringUtil.IsNotEmpty(inputCommand) AndAlso "list".Equals(inputCommand) Then
             IsList = True
             Return IsList
