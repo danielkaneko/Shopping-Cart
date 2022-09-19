@@ -24,7 +24,10 @@ Public Class MeaningfulInputCheckerTest
         <TestCase("--naMe abc")>
         <TestCase("--prIce 100-1000")>
         <TestCase("--sort namae")>
+        <TestCase("--soRt name")>
+        <TestCase("--sort nAme")>
         <TestCase("--soRt price")>
+        <TestCase("--sort prICe")>
         <TestCase("exsit")>
         <TestCase("")>
         <TestCase(Nothing)>
