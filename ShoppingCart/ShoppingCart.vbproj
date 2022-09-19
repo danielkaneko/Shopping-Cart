@@ -93,7 +93,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="Products.vb" />
-    <Compile Include="StringExtraction.vb" />
+    <Compile Include="SplittingString.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">

@@ -1,7 +1,7 @@
 ﻿''' <summary>
 ''' 文字列を分割する
 ''' </summary>
-Public Class StringExtraction
+Public Class SplittingString
     ''' <summary>
     ''' 文字列を配列に分ける
     ''' </summary>
