@@ -14,8 +14,7 @@
                 ls.ShowList(productsList.FindAll(Function(name) name.ProductsName.Contains(inputCommand.Substring(7))))
             End If
             If mic.IsSearchPrice Then
-                Dim se As New StringExtraction
-                Dim amountString As String() = se.ExtractionString(se.ExtractionString(inputCommand, " ")(1), "-")
+                Dim amountString As String() = StringExtraction.ExtractionString(StringExtraction.ExtractionString(inputCommand, " ")(1), "-")
                 ls.ShowList(productsList.FindAll(Function(price) Integer.Parse(amountString(0)) < price.ProductsPrice AndAlso price.ProductsPrice < Integer.Parse(amountString(1))))
             End If
             If mic.IsSortName Then
