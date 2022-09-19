@@ -1,5 +1,5 @@
 ﻿''' <summary>
-''' 所品リストのプロパティ設定
+''' 商品リストのプロパティ設定
 ''' </summary>
 Public Class Products
     ''' <summary>
