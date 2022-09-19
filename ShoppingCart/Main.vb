@@ -11,7 +11,7 @@
                 ls.ShowList(productsList)
             End If
             If mic.IsSearchName Then
-                ls.ShowList(productsList.FindAll(Function(name) name.ProductsName.Contains(inputCommand.Substring(7))))
+                ls.ShowList(productsList.FindAll(Function(name) name.ProductsName.Contains(SplittingString.SplitIntoArrays(inputCommand, " ")(1))))
             End If
             If mic.IsSearchPrice Then
                 Dim amountString As String() = SplittingString.SplitIntoArrays(SplittingString.SplitIntoArrays(inputCommand, " ")(1), "-")
