@@ -5,19 +5,19 @@ Public Class Products
     ''' <summary>
     ''' 商品名
     ''' </summary>
-    Public ProductsName As String
+    ReadOnly Property ProductsName As String
     ''' <summary>
     ''' 商品説明
     ''' </summary>
-    Public ProductsDescription As String
+    ReadOnly Property ProductsDescription As String
     ''' <summary>
     ''' 商品価格
     ''' </summary>
-    Public ProductsPrice As Integer
+    ReadOnly Property ProductsPrice As Integer
     ''' <summary>
     ''' 商品在庫
     ''' </summary>
-    Public ProductsInventory As Integer
+    ReadOnly Property ProductsInventory As Integer
     ''' <summary>
     ''' コンストラクタ
     ''' </summary>
