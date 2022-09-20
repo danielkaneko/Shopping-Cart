@@ -73,6 +73,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ReturningListInResponseToCommand.vb" />
     <Compile Include="ProductsListMaker.vb" />
     <Compile Include="ListShower.vb" />
     <Compile Include="Main.vb" />

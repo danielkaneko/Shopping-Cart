@@ -88,6 +88,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="ReturningListInResponseToCommandTest.vb" />
     <Compile Include="SplittingStringTest.vb" />
   </ItemGroup>
   <ItemGroup>
