@@ -2,6 +2,14 @@
 ''' 入力されたコマンドごとにリストを返すクラス
 ''' </summary>
 Public Class ReturningListInResponseToCommand
+    Private Class GoodsNameCompare : Implements IComparer(Of String)
+        Public Function Compare(x As String, y As String) As Integer Implements IComparer(Of String).Compare
+            Dim ci As System.Globalization.CompareInfo = System.Globalization.CompareInfo.GetCompareInfo("ja-JP")
+            Return ci.Compare(x, y)
+        End Function
+    End Class
+
+
     ''' <summary>
     ''' 商品名で検索されたリストを返す
     ''' </summary>
@@ -29,7 +37,8 @@ Public Class ReturningListInResponseToCommand
     ''' <param name="productsList">商品リスト</param>
     ''' <returns>表示するリスト</returns>
     Public Function ReturnSortNameList(productsList As List(Of Products)) As List(Of Products)
-        Return productsList.OrderBy(Function(products) products.ProductsName).ThenBy(Function(products) products.ProductsDescription).ThenBy(Function(products) products.ProductsPrice).ThenBy(Function(products) products.ProductsInventory).ToList()
+        Dim c As New GoodsNameCompare
+        Return productsList.OrderBy(Function(products) products.ProductsName, c).ThenBy(Function(products) products.ProductsDescription).ThenBy(Function(products) products.ProductsPrice).ThenBy(Function(products) products.ProductsInventory).ToList()
         'Return (From products In productsList Order By products.ProductsName, products.ProductsDescription, products.ProductsPrice, products.ProductsInventory).ToList()
     End Function
 
