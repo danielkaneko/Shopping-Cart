@@ -29,7 +29,8 @@ Public Class ReturningListInResponseToCommand
     ''' <param name="productsList">商品リスト</param>
     ''' <returns>表示するリスト</returns>
     Public Function ReturnSortNameList(productsList As List(Of Products)) As List(Of Products)
-        Return (From products In productsList Order By products.ProductsName, products.ProductsDescription, products.ProductsPrice, products.ProductsInventory).ToList()
+        Return productsList.OrderBy(Function(products) products.ProductsName).ThenBy(Function(products) products.ProductsDescription).ThenBy(Function(products) products.ProductsPrice).ThenBy(Function(products) products.ProductsInventory).ToList()
+        'Return (From products In productsList Order By products.ProductsName, products.ProductsDescription, products.ProductsPrice, products.ProductsInventory).ToList()
     End Function
 
     ''' <summary>

@@ -22,6 +22,7 @@ Public Class ReturningListInResponseToCommandTest
         Assert.That(actual.Count, [Is].EqualTo(productsList.Count))
         Assert.That("applewatch", [Is].EqualTo(actual(0).ProductsName))
         Assert.That("掃除機", [Is].EqualTo(actual(actual.Count - 1).ProductsName))
+        Console.WriteLine(Join(actual.Select(Function(a) a.ProductsName).ToArray, vbCrLf))
     End Sub
     <Test>
     Public Sub 商品価格検索で入力した金額の範囲内の商品が取得できていればTrueを返す()
