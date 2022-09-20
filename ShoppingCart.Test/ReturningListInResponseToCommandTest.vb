@@ -19,7 +19,9 @@ Public Class ReturningListInResponseToCommandTest
     <Test>
     Public Sub 商品名で並び替えされたリストの並び替えが正しく行われていればTrueを返す()
         Dim actual As List(Of Products) = rlirtc.ReturnSortNameList(productsList)
-        Assert.IsTrue(actual.Count = productsList.Count AndAlso "applewatch".Equals(actual(0).ProductsName) AndAlso "掃除機".Equals(actual(actual.Count - 1).ProductsName))
+        Assert.That(actual.Count, [Is].EqualTo(productsList.Count))
+        Assert.That("applewatch", [Is].EqualTo(actual(0).ProductsName))
+        Assert.That("掃除機", [Is].EqualTo(actual(actual.Count - 1).ProductsName))
     End Sub
     <Test>
     Public Sub 商品価格検索で入力した金額の範囲内の商品が取得できていればTrueを返す()
