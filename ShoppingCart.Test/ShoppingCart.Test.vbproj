@@ -88,6 +88,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="ProductsListMakerTest.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -109,6 +110,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Fw\Fhi.Fw.Test\Fhi.Fw.Test.vbproj">
+      <Project>{DA8F28E7-58E7-4D77-9A4B-8AFBF6DDE443}</Project>
+      <Name>Fhi.Fw.Test</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Fw\Fhi.Fw\Fhi.Fw.vbproj">
       <Project>{8d9ef493-1db9-4b5d-a205-22513969d5b2}</Project>
       <Name>Fhi.Fw</Name>
