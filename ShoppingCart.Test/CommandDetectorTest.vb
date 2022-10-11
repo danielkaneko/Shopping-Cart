@@ -29,4 +29,12 @@ Public Class CommandDetectorTest
         Assert.That(actual(0).Name, [Is].EqualTo("applewatch"))
         Assert.That(actual(12).Name, [Is].EqualTo("掃除機"))
     End Sub
+    <Test>
+    Public Sub 商品価格検索で入力した金額の範囲内の商品が取得できていること()
+        Dim actual As List(Of Products) = commandDetector.SortListByPrice(productsList.Values.ToList)
+        Assert.That(actual.Count, [Is].EqualTo(productsList.Count))
+        Assert.That(actual(0).Name, [Is].EqualTo("鉛筆"))
+        Assert.That(actual(12).Name, [Is].EqualTo("携帯電話"))
+    End Sub
+
 End Class

@@ -32,6 +32,9 @@
         If inputChecker.IsSortName Then
             Return New InputSortName
         End If
+        If inputChecker.IsSortPrice Then
+            Return New InputSortPrice
+        End If
         Return New InputThatNotNeedAction
     End Function
 
@@ -79,6 +82,17 @@
             Dim listShowwer As New ListShower
             Dim commandDetector As New CommandDetector
             listShowwer.ShowList(commandDetector.SortListByName(productsList.Values.ToList))
+        End Sub
+    End Class
+
+    ''' <summary>
+    ''' 商品価格並び替えが入力されたときの処理
+    ''' </summary>
+    Private Class InputSortPrice : Implements InputCommandAction
+        Private Sub DoAction(inputCommand As String, productsList As Dictionary(Of String, Products)) Implements InputCommandAction.DoAction
+            Dim listShowwer As New ListShower
+            Dim commandDetector As New CommandDetector
+            listShowwer.ShowList(commandDetector.SortListByPrice(productsList.Values.ToList))
         End Sub
     End Class
 

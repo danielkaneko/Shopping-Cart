@@ -13,6 +13,7 @@ Public Class MeaningfulInputCheckerTest
         <TestCase("--name abc")>
         <TestCase("--price 100-1000")>
         <TestCase("--sort name")>
+        <TestCase("--sort price")>
         Public Sub コマンド入力で渡された値がコマンドとして適切であればTrueを返す(inputCommand As String)
             Dim actual As Boolean = meaningfulInputChecker.ValidateInputCommand(inputCommand)
             Assert.IsTrue(actual)
@@ -24,6 +25,8 @@ Public Class MeaningfulInputCheckerTest
         <TestCase("--sort namae")>
         <TestCase("--soRt name")>
         <TestCase("--sort nAme")>
+        <TestCase("--soRt price")>
+        <TestCase("--sort prICe")>
         <TestCase("")>
         <TestCase(Nothing)>
         Public Sub コマンド入力で渡された値がコマンドとして適切でなければFalseを返す(inputCommand As String)

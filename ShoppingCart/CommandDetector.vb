@@ -40,6 +40,17 @@ Public Class CommandDetector
         Dim compare As New ProductsNameCompare
         Return productsList.OrderBy(Function(product) product.Name, compare).ThenBy(Function(product) product.Id).ThenBy(Function(product) product.Description).ThenBy(Function(product) product.Price).ThenBy(Function(product) product.Inventory).ToList()
     End Function
+
+    ''' <summary>
+    ''' 商品価格で並び替えされたリストを返す
+    ''' </summary>
+    ''' <param name="productsList">商品リスト</param>
+    ''' <returns>表示するリスト</returns>
+    Public Function SortListByPrice(productsList As List(Of Products)) As List(Of Products)
+        Dim compare As New ProductsNameCompare
+        Return productsList.OrderBy(Function(product) product.Price).ThenBy(Function(product) product.Id).ThenBy(Function(product) product.Name, compare).ThenBy(Function(product) product.Description).ThenBy(Function(product) product.Inventory).ToList()
+    End Function
+
     ''' <summary>
     ''' コマンドを分割する
     ''' </summary>
