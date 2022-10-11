@@ -74,7 +74,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ProductsListMaker.vb" />
+    <Compile Include="ListShower.vb" />
     <Compile Include="Main.vb" />
+    <Compile Include="MeaningfulInputChecker.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
