@@ -26,6 +26,9 @@
         If inputChecker.IsSearchName Then
             Return New InputSearchName
         End If
+        If inputChecker.IsSearchPrice Then
+            Return New InputSearchPrice
+        End If
         Return New InputThatNotNeedAction
     End Function
 
@@ -51,6 +54,17 @@
             Dim listShowwer As New ListShower
             Dim commandDetector As New CommandDetector
             listShowwer.ShowList(commandDetector.FilterListByName(inputCommand, productsList.Values.ToList))
+        End Sub
+    End Class
+
+    ''' <summary>
+    ''' 商品価格検索が入力されたときの処理
+    ''' </summary>
+    Private Class InputSearchPrice : Implements InputCommandAction
+        Private Sub DoAction(inputCommand As String, productsList As Dictionary(Of String, Products)) Implements InputCommandAction.DoAction
+            Dim listShowwer As New ListShower
+            Dim commandDetector As New CommandDetector
+            listShowwer.ShowList(commandDetector.FilterListByPrice(inputCommand, productsList.Values.ToList))
         End Sub
     End Class
     ''' <summary>
