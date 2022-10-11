@@ -10,6 +10,9 @@
             If IsNothing(inputCommand) Then
                 Throw New ArgumentException($"{NameOf(inputCommand)}に値が存在しません")
             End If
+            If inputChecker.IsExit Then
+                Exit Do
+            End If
             DetectCommand(inputChecker).DoAction(inputCommand, productsList)
         Loop
     End Sub

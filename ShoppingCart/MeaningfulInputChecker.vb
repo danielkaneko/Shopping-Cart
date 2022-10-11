@@ -26,6 +26,11 @@ Public Class MeaningfulInputChecker
     ''' </summary>
     Public IsSortPrice As Boolean = False
     ''' <summary>
+    ''' 入力されたコマンドがExitである
+    ''' </summary>
+    Public IsExit As Boolean = False
+
+    ''' <summary>
     ''' 意味のある入力がされるまで待機する
     ''' </summary>
     ''' <returns>入力されたコマンド</returns>
@@ -62,6 +67,10 @@ Public Class MeaningfulInputChecker
         If StringUtil.IsNotEmpty(inputCommand) AndAlso "--sort price".Equals(inputCommand) Then
             IsSortPrice = True
             Return IsSortPrice
+        End If
+        If StringUtil.IsNotEmpty(inputCommand) AndAlso "exit".Equals(inputCommand) Then
+            IsExit = True
+            Return IsExit
         End If
         Console.WriteLine("入力内容が正しくありません。")
         Return False
