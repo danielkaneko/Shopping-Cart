@@ -22,4 +22,11 @@ Public Class CommandDetectorTest
         Assert.That(actual(1).Name, [Is].EqualTo("ノート"))
         Assert.That(actual(2).Name, [Is].EqualTo("鉛筆"))
     End Sub
+    <Test>
+    Public Sub 商品名で並び替えされたリストの並び替えが正しく行われていること()
+        Dim actual As List(Of Products) = commandDetector.SortListByName(productsList.Values.ToList)
+        Assert.That(actual.Count, [Is].EqualTo(productsList.Count))
+        Assert.That(actual(0).Name, [Is].EqualTo("applewatch"))
+        Assert.That(actual(12).Name, [Is].EqualTo("掃除機"))
+    End Sub
 End Class

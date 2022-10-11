@@ -18,6 +18,10 @@ Public Class MeaningfulInputChecker
     ''' </summary>
     Public IsSearchPrice As Boolean = False
     ''' <summary>
+    ''' 入力されたコマンドが--sort nameである
+    ''' </summary>
+    Public IsSortName As Boolean = False
+    ''' <summary>
     ''' 意味のある入力がされるまで待機する
     ''' </summary>
     ''' <returns>入力されたコマンド</returns>
@@ -46,6 +50,10 @@ Public Class MeaningfulInputChecker
         If StringUtil.IsNotEmpty(inputCommand) AndAlso Regex.IsMatch(inputCommand, "--price [0-9]{1,}\-[0-9]{1,}$") Then
             IsSearchPrice = True
             Return IsSearchPrice
+        End If
+        If StringUtil.IsNotEmpty(inputCommand) AndAlso "--sort name".Equals(inputCommand) Then
+            IsSortName = True
+            Return IsSortName
         End If
         Console.WriteLine("入力内容が正しくありません。")
         Return False
