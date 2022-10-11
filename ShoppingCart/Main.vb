@@ -3,6 +3,7 @@
     Sub Main()
         Dim productListMaker As New ProductsListMaker
         Dim productsList As Dictionary(Of String, Products) = productListMaker.MakeProductsList
+        Dim commandDetector As New CommandDetector
         Do
             Dim inputChecker As New MeaningfulInputChecker
             Dim inputCommand As String = inputChecker.WaitForMeaningfulInput
@@ -22,6 +23,9 @@
         If inputChecker.IsListCommand Then
             Return New InputListCommand
         End If
+        If inputChecker.IsSearchName Then
+            Return New InputSearchName
+        End If
         Return New InputThatNotNeedAction
     End Function
 
@@ -39,6 +43,16 @@
         End Sub
     End Class
 
+    ''' <summary>
+    ''' 商品名検索が入力されたときの処理
+    ''' </summary>
+    Private Class InputSearchName : Implements InputCommandAction
+        Private Sub DoAction(inputCommand As String, productsList As Dictionary(Of String, Products)) Implements InputCommandAction.DoAction
+            Dim listShowwer As New ListShower
+            Dim commandDetector As New CommandDetector
+            listShowwer.ShowList(commandDetector.FilterListByName(inputCommand, productsList.Values.ToList))
+        End Sub
+    End Class
     ''' <summary>
     ''' 処理する必要がないコマンドが入力されたときの処理
     ''' </summary>
