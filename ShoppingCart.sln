@@ -11,6 +11,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FW", "FW", "{8E48EC3E-4337-
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Fhi.Fw", "Fw\Fhi.Fw\Fhi.Fw.vbproj", "{8D9EF493-1DB9-4B5D-A205-22513969D5B2}"
 EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Fhi.Fw.Test", "Fw\Fhi.Fw.Test\Fhi.Fw.Test.vbproj", "{DA8F28E7-58E7-4D77-9A4B-8AFBF6DDE443}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,12 +45,21 @@ Global
 		{8D9EF493-1DB9-4B5D-A205-22513969D5B2}.Release|Any CPU.Build.0 = Release|Any CPU
 		{8D9EF493-1DB9-4B5D-A205-22513969D5B2}.Release|x86.ActiveCfg = Release|x86
 		{8D9EF493-1DB9-4B5D-A205-22513969D5B2}.Release|x86.Build.0 = Release|x86
+		{DA8F28E7-58E7-4D77-9A4B-8AFBF6DDE443}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA8F28E7-58E7-4D77-9A4B-8AFBF6DDE443}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA8F28E7-58E7-4D77-9A4B-8AFBF6DDE443}.Debug|x86.ActiveCfg = Debug|x86
+		{DA8F28E7-58E7-4D77-9A4B-8AFBF6DDE443}.Debug|x86.Build.0 = Debug|x86
+		{DA8F28E7-58E7-4D77-9A4B-8AFBF6DDE443}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA8F28E7-58E7-4D77-9A4B-8AFBF6DDE443}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA8F28E7-58E7-4D77-9A4B-8AFBF6DDE443}.Release|x86.ActiveCfg = Release|x86
+		{DA8F28E7-58E7-4D77-9A4B-8AFBF6DDE443}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{8D9EF493-1DB9-4B5D-A205-22513969D5B2} = {8E48EC3E-4337-4C33-8509-568786D22C2D}
+		{DA8F28E7-58E7-4D77-9A4B-8AFBF6DDE443} = {8E48EC3E-4337-4C33-8509-568786D22C2D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3455B717-3FC5-4CA3-9BA9-689DF5B53249}
